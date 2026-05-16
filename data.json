@@ -5718,7 +5718,7 @@
       "drive_link": "https://drive.google.com/drive/u/0/folders/1vSxBlAXCYFnVp0QiKjxs5XvCgcJYCDgh",
       "photo": "https://drive.google.com/uc?export=view&id=18mva_ysBmFU83O70HL1C0JC1NtixzHUJ",
       "booked": true,
-      "booked_until": ""
+      "booked_until": "13.06"
     },
     {
       "sku": "00732",
@@ -5744,7 +5744,7 @@
       "drive_link": "https://drive.google.com/drive/u/0/folders/1FsH2X67G9IVlJWE5V-4llShCnjS5ozmu",
       "photo": "https://drive.google.com/uc?export=view&id=18F7OGqjSyYvPBSJ9PLkputNBSP1VhKMe",
       "booked": true,
-      "booked_until": ""
+      "booked_until": "19.09"
     },
     {
       "sku": "00752",
@@ -6459,6 +6459,32 @@
       "drive_link": "https://drive.google.com/drive/u/0/folders/1Yk7RHvDgE1qUfuSUB5kEri-3aDrNwcjb",
       "photo": "https://drive.google.com/uc?export=view&id=1W2pxOCaRhBTOJInJ4yWV2URffla4p1sz",
       "booked": true,
+      "booked_until": "22.05"
+    },
+    {
+      "sku": "00819",
+      "name": "Шкура коровы (черн, корич, бел)",
+      "category": "Аксессуары",
+      "subcategory": "Ковры",
+      "qty": 1,
+      "price": 60.0,
+      "notes": "160х140 см",
+      "drive_link": "https://drive.google.com/drive/u/0/folders/1UTsZt0WbbqcUOgnODmnO5RT6SW6xND9i",
+      "photo": "https://drive.google.com/uc?export=view&id=1qdCmT-BkDMD6Xfqu8ZbPNDtipjHPLdHa",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "00001",
+      "name": "Шкура коровы (черн, бел)",
+      "category": "Аксессуары",
+      "subcategory": "Ковры",
+      "qty": 1,
+      "price": 60.0,
+      "notes": "160х140 см",
+      "drive_link": "https://drive.google.com/drive/u/0/folders/1B3D-TsUyIYienw0rDAN6FuPjeLfBvffb",
+      "photo": "https://drive.google.com/uc?export=view&id=1oCJqRypePuZRgebmSuPa166BMJyzQbOt",
+      "booked": false,
       "booked_until": ""
     }
   ],
@@ -6516,5 +6542,5 @@
       ]
     }
   ],
-  "total": 497
+  "total": 499
 }
