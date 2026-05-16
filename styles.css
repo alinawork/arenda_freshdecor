@@ -1,0 +1,401 @@
+/* ========== Дизайн-токены Fresh Decor ========== */
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f8f9;
+  --bg-mint: #e8f3ed;
+  --bg-mint-soft: #f0f7f3;
+  --ink: #1a1a1a;
+  --ink-soft: #5a5a5a;
+  --ink-muted: #9a9a9a;
+  --line: #ececec;
+  --line-soft: #f3f3f3;
+
+  --mint: #87d3b1;
+  --mint-dark: #6cbf9a;
+  --mint-deep: #2f7a5a;
+  --warn-bg: #fbe9d2;
+  --warn: #b87534;
+
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+body { padding-bottom: calc(40px + env(safe-area-inset-bottom)); }
+
+.hidden { display: none !important; }
+
+/* ========== Шапка ========== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
+  padding: 14px 16px;
+  padding-top: calc(14px + env(safe-area-inset-top));
+  display: grid;
+  grid-template-columns: 40px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  height: 32px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.header-icon {
+  background: var(--bg-soft);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
+  transition: background 0.15s;
+}
+.header-icon:active { background: var(--line); }
+.header-icon--ghost { background: transparent; pointer-events: none; }
+
+/* ========== Экраны ========== */
+.screen {
+  padding: 18px 16px 24px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* ========== Hero ========== */
+.hero {
+  background: var(--bg-mint);
+  border-radius: var(--radius-lg);
+  padding: 24px 22px 22px;
+  margin-bottom: 22px;
+}
+.hero-title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+.hero-sub {
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-soft);
+  margin-bottom: 18px;
+}
+
+.search-box {
+  position: relative;
+}
+.search-icon {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ink-muted);
+  pointer-events: none;
+}
+.search-box input {
+  width: 100%;
+  padding: 14px 18px 14px 44px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  font-family: var(--font);
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+}
+.search-box input::placeholder { color: var(--ink-muted); }
+.search-box input:focus { border-color: var(--mint); }
+
+/* ========== Каталог: заголовок + чипы ========== */
+.catalog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 14px;
+  padding: 0 4px;
+}
+.catalog-title {
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.catalog-count {
+  font-size: 13px;
+  color: var(--ink-muted);
+}
+
+.chips-row {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  padding: 0 16px 14px;
+  margin: 0 -16px 4px;
+}
+.chips-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0;
+  padding: 9px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-soft);
+  color: var(--ink);
+  border: none;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.chip:active { background: var(--line); }
+.chip.active { background: var(--ink); color: #fff; }
+
+/* ========== Сетка товаров ========== */
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.product-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font);
+  color: var(--ink);
+  padding: 0;
+  transition: transform 0.15s;
+}
+.product-card:active { transform: scale(0.985); }
+
+.product-card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-soft);
+  overflow: hidden;
+}
+.product-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product-card-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+}
+
+.product-card-booking {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--warn-bg);
+  color: var(--warn);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.product-card-body {
+  padding: 12px 12px 14px;
+}
+.product-card-name {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.005em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 36px;
+  margin-bottom: 6px;
+}
+.product-card-price {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ========== Карточка товара ========== */
+.detail-image {
+  width: 100%;
+  aspect-ratio: 1;
+  background: var(--bg-soft);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 16px;
+  position: relative;
+}
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.detail-image-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-muted);
+}
+
+.detail-close {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: var(--ink);
+}
+
+.detail-category-chip {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: var(--radius-pill);
+  background: var(--bg-mint-soft);
+  color: var(--mint-deep);
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 14px;
+}
+.detail-sku {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--ink-muted);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+.detail-name {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 18px;
+}
+
+.detail-chips {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+.detail-chip {
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+.detail-chip-label {
+  font-size: 11px;
+  color: var(--ink-muted);
+  margin-bottom: 4px;
+}
+.detail-chip-value {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.detail-chip--available {
+  background: var(--bg-mint-soft);
+}
+.detail-chip--available .detail-chip-value { color: var(--mint-deep); }
+.detail-chip--booked {
+  background: var(--warn-bg);
+}
+.detail-chip--booked .detail-chip-value { color: var(--warn); }
+
+.detail-notes {
+  background: var(--bg-soft);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  font-size: 13px;
+  color: var(--ink-soft);
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.detail-cta {
+  margin-top: 24px;
+}
+
+/* ========== Кнопки ========== */
+.btn-dark {
+  width: 100%;
+  padding: 16px;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: background 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-dark:active { background: #000; }
+
+/* ========== Состояния ========== */
+.empty {
+  text-align: center;
+  padding: 48px 20px;
+}
+.empty-title { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+.empty-text { font-size: 13px; color: var(--ink-muted); }
+
+.loader {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: var(--ink-muted);
+}

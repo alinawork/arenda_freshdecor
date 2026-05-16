@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Fresh Decor</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <button id="back-btn" class="header-icon hidden" aria-label="Назад">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+
+    <div class="header-brand">
+      <img src="logo.png" alt="Fresh Decor" class="brand-logo">
+    </div>
+
+    <span class="header-icon header-icon--ghost" aria-hidden="true"></span>
+  </header>
+
+  <!-- 1. Главная: hero + чипы + сетка -->
+  <main id="screen-home" class="screen">
+    <section class="hero">
+      <h2 class="hero-title">Аренда декора<br>для&nbsp;событий</h2>
+      <p class="hero-sub">Выбирайте декор для&nbsp;вашего мероприятия — нажмите «Уточнить», чтобы написать менеджеру.</p>
+      <div class="search-box">
+        <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input id="search-input" type="search" placeholder="Поиск по названию или артикулу">
+      </div>
+    </section>
+
+    <div class="catalog-header">
+      <h3 class="catalog-title">Каталог</h3>
+      <span class="catalog-count" id="catalog-count"></span>
+    </div>
+
+    <div class="chips-row" id="chips-row"></div>
+
+    <div id="products-grid" class="products-grid"></div>
+
+    <div id="products-empty" class="empty hidden">
+      <p class="empty-title">Ничего не нашлось</p>
+      <p class="empty-text">Попробуйте другой запрос или фильтр</p>
+    </div>
+
+    <div id="catalog-loader" class="loader">Загружаем каталог…</div>
+  </main>
+
+  <!-- 2. Карточка товара -->
+  <main id="screen-product" class="screen hidden">
+    <div id="product-detail"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
