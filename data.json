@@ -11150,7 +11150,7 @@
       "price": 3.0,
       "notes": "Рамка а4",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1uu6DjAkU4YnkJdqP_gR4BWi5nBhwoW8k",
-      "photo": "https://drive.google.com/file/d/1sEIcvBTYqbxZg6iM7DW4fIKZZlrZDwR9/view?usp=share_link",
+      "photo": "https://drive.google.com/thumbnail?id=1sEIcvBTYqbxZg6iM7DW4fIKZZlrZDwR9&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11163,7 +11163,7 @@
       "price": 12.0,
       "notes": "8 см на 4 см",
       "drive_link": "https://drive.google.com/drive/u/0/folders/17g5T0HvKE62qdyixFjpdHHEs04Bq36sY",
-      "photo": "https://drive.google.com/file/d/1sEIcvBTYqbxZg6iM7DW4fIKZZlrZDwR9/view?usp=share_link",
+      "photo": "https://drive.google.com/thumbnail?id=1sEIcvBTYqbxZg6iM7DW4fIKZZlrZDwR9&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11254,7 +11254,7 @@
       "price": 110.0,
       "notes": "Столик для росписи в золотом цвете",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1OzDr_6-EhYMlA6oA6iSuTVxD1siuT7S5",
-      "photo": "",
+      "photo": "https://drive.google.com/thumbnail?id=1UVxH5aRjAIEPUPB_eqpsQ-AQxoqqJ9rq&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11267,7 +11267,7 @@
       "price": 12.0,
       "notes": "Чаша для цветов с рифленым краем Два размера по 4 шт:1)Высота: 6,2 см; ширина основания: 5 см, диаметр чаши 11 см2) Высота 10см; ширина основания 5 см; диаметр чаши 11см",
       "drive_link": "https://drive.google.com/drive/folders/1bivgfrZMxN1LA1qXWTnBHkyvsUHBR9-q?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
-      "photo": "",
+      "photo": "https://drive.google.com/thumbnail?id=11PXkOoiiS_CbOSkXnGUlHv1_g7Td8rhu&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11293,7 +11293,7 @@
       "price": 21.0,
       "notes": "Ножницы портновские",
       "drive_link": "https://drive.google.com/drive/folders/1L-UMZjuzG81FwIl-hXXCgmKJXId6_0Qz?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
-      "photo": "",
+      "photo": "https://drive.google.com/thumbnail?id=1lXe06GQLF4T_RdZxorInBXMqONt2YUBT&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11306,7 +11306,7 @@
       "price": 12.0,
       "notes": "Кашпо для композийДлина: 30 см Ширина: 12 см Глубина: 8 см",
       "drive_link": "https://drive.google.com/drive/folders/1lk--ZfPzisMiGELwLTl913PFCczmeZ6y?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
-      "photo": "",
+      "photo": "https://drive.google.com/thumbnail?id=1HAx1NqQoNAweSngP9s0BXvmBqnnu9Dae&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
@@ -11315,11 +11315,11 @@
       "name": "Луна",
       "category": "Конструкции",
       "subcategory": "Арки",
-      "qty": 0,
+      "qty": 1,
       "price": 1350.0,
       "notes": "Арка Луна:Металлический каркас Светорассеивающий поликарбонат Теплое свечениеРазмер: 3*3 метра Ноги у основания 50 смСтоимость: 450$",
       "drive_link": "https://drive.google.com/drive/folders/1R3ff2XZqXAaJwZU07QuZ1gxM0mk36_IH?dmr=1&ec=wgc-drive-%5Bmodule%5D-goto",
-      "photo": "",
+      "photo": "https://drive.google.com/thumbnail?id=1GWRk2X2nQ6eR-h9sCOGtR-8xETUPPt-g&sz=w1000",
       "booked": false,
       "booked_until": ""
     },
