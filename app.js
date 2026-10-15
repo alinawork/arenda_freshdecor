@@ -102,23 +102,39 @@ function getFavoriteProducts() {
   return catalog.products.filter(product => isFavorite(product.sku));
 }
 
+function normalizeCatalogLabel(value) {
+  return String(value || "")
+    .trim()
+    .toLocaleLowerCase("ru")
+    .replace(/ё/g, "е")
+    .replace(/\s+/g, " ");
+}
+
+function isArtificialPlantsLabel(value) {
+  const label = normalizeCatalogLabel(value);
+  const isArtificial = label.includes("искусствен") || label.includes("исскуствен");
+  return isArtificial && (label.includes("растен") || label.includes("цвет"));
+}
+
 function getGeneralCategory(product) {
   const category = (product.category || "").trim();
   const subcategory = (product.subcategory || "").trim();
+  const categoryKey = normalizeCatalogLabel(category);
+  const subcategoryKey = normalizeCatalogLabel(subcategory);
 
-  if (category === "Искусственные растения" || ["Искусственные растения", "Искусственные цветы"].includes(subcategory)) return "artificial-plants";
-  if (category === "Новый год" || ["Новый год", "Новогодний декор"].includes(subcategory)) return "new-year";
-  if (category === "Тематический декор" || ["Хэллоуин", "Цирк", "СССР", "Этно"].includes(subcategory)) return "themed-decor";
-  if (!subcategory || ["Ретро", "Цветы / Лепестки", "Камни", "Другое", "Зеркала", "Батут"].includes(subcategory)) return "decorations";
-  if (subcategory === "Зонты") return "furniture";
-  if (["Пледы", "Подушки", "Ковры", "Ткань"].includes(subcategory)) return "textile";
-  if (subcategory === "Матрасы") return "furniture";
-  if (["Арки", "Стойки", "Вентиляторы"].includes(subcategory)) return "structures";
-  if (/^Рамки\s*\/\s*[Мм]ольберты$/.test(subcategory) || ["Номерки на столы", "Мольберты", "Цветочницы", "Спортивный инвентарь"].includes(subcategory)) return "decor";
-  if (category === "Освещение") return "lighting";
-  if (category === "Посуда") return "tableware";
-  if (category === "Текстиль" || category === "Ткань") return "textile";
-  if (category === "Мебель") return "furniture";
+  if (isArtificialPlantsLabel(categoryKey) || isArtificialPlantsLabel(subcategoryKey)) return "artificial-plants";
+  if (categoryKey === "новый год" || ["новый год", "новогодний декор"].includes(subcategoryKey)) return "new-year";
+  if (categoryKey === "тематический декор" || ["хэллоуин", "цирк", "ссср", "этно"].includes(subcategoryKey)) return "themed-decor";
+  if (!subcategoryKey || ["ретро", "цветы / лепестки", "камни", "другое", "зеркала", "батут"].includes(subcategoryKey)) return "decorations";
+  if (subcategoryKey === "зонты") return "furniture";
+  if (["пледы", "подушки", "ковры", "ткань"].includes(subcategoryKey)) return "textile";
+  if (subcategoryKey === "матрасы") return "furniture";
+  if (["арки", "стойки", "вентиляторы"].includes(subcategoryKey)) return "structures";
+  if (/^рамки\s*\/\s*мольберты$/.test(subcategoryKey) || ["номерки на столы", "мольберты", "цветочницы", "спортивный инвентарь"].includes(subcategoryKey)) return "decor";
+  if (categoryKey === "освещение") return "lighting";
+  if (categoryKey === "посуда") return "tableware";
+  if (categoryKey === "текстиль" || categoryKey === "ткань") return "textile";
+  if (categoryKey === "мебель") return "furniture";
   return "decor";
 }
 
@@ -157,13 +173,17 @@ function saveCurrentScroll() {
   if (current) current.scrollY = window.scrollY;
 }
 
+function setBackButtonVisible(visible) {
+  document.getElementById("back-btn").classList.toggle("hidden", !visible);
+  try { visible ? tg.BackButton.show() : tg.BackButton.hide(); } catch (error) {}
+}
+
 function showScreen(name, scrollY = 0) {
   document.querySelectorAll(".screen").forEach(screen => screen.classList.add("hidden"));
   document.getElementById("screen-" + name).classList.remove("hidden");
 
-  const hasBack = name === "product" || name === "products";
-  document.getElementById("back-btn").classList.toggle("hidden", !hasBack);
-  try { hasBack ? tg.BackButton.show() : tg.BackButton.hide(); } catch (error) {}
+  const hasBack = name === "product" || name === "products" || (name === "home" && currentSearch.trim());
+  setBackButtonVisible(Boolean(hasBack));
 
   renderBottomNav(name);
   requestAnimationFrame(() => window.scrollTo({ top: scrollY, left: 0, behavior: "instant" }));
@@ -192,6 +212,9 @@ function switchRoot(name) {
 }
 
 function openHome() {
+  currentSearch = "";
+  document.getElementById("search-input").value = "";
+  renderSearchResults();
   switchRoot("home");
 }
 
@@ -264,11 +287,13 @@ function renderSearchResults() {
   const query = currentSearch.trim().toLowerCase();
 
   if (!query) {
+    setBackButtonVisible(false);
     resultsSection.classList.add("hidden");
     categoriesSection.classList.remove("hidden");
     return;
   }
 
+  setBackButtonVisible(true);
   const results = catalog.products.filter(product =>
     String(product.name || "").toLowerCase().includes(query) ||
     String(product.sku || "").toLowerCase().includes(query) ||
