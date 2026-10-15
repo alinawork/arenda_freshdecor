@@ -1,0 +1,182 @@
+name: Update catalog data
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update-data-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build data.json from Google Sheets
+        run: |
+          python3 - <<'PY'
+          import csv
+          import json
+          import re
+          import urllib.request
+          from pathlib import Path
+
+          SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/11Yb25NFT5GpUvPG720evup5SC4dLXq9pOI38SxGWPbM/export?format=csv&gid=1626650454"
+
+          OUTPUT_FILE = Path("data.json")
+
+          def clean(value):
+              return str(value or "").strip()
+
+          def get(row, index):
+              return clean(row[index]) if index < len(row) else ""
+
+          def clean_qty(value):
+              value = clean(value)
+
+              if not value:
+                  return 0
+
+              if value.isdigit():
+                  return int(value)
+
+              nums = re.findall(r"(\d+)\s*шт", value.lower())
+
+              if nums:
+                  return sum(int(n) for n in nums)
+
+              nums = re.findall(r"\d+", value)
+
+              return int(nums[0]) if nums else 0
+
+          def clean_price(value):
+              value = clean(value)
+              value = value.replace("\xa0", "")
+              value = value.replace(" ", "")
+              value = value.replace(",", ".")
+
+              if not value:
+                  return 0.0
+
+              try:
+                  return float(value)
+              except ValueError:
+                  return 0.0
+
+          def is_booked(status):
+              status = clean(status).lower()
+              return "брон" in status or "заброн" in status
+
+          print(f"Скачиваю таблицу: {SHEET_CSV_URL}")
+
+          request = urllib.request.Request(
+              SHEET_CSV_URL,
+              headers={"User-Agent": "Mozilla/5.0"}
+          )
+
+          with urllib.request.urlopen(request, timeout=30) as response:
+              csv_text = response.read().decode("utf-8-sig")
+
+          rows = list(csv.reader(csv_text.splitlines()))
+
+          products = []
+
+          # Структура таблицы:
+          # A=0 Категория
+          # B=1 Подкатегория
+          # C=2 Артикул
+          # D=3 Фото-миниатюра
+          # E=4 Название
+          # F=5 Ссылка на папку
+          # G=6 Кол-во
+          # H=7 Закупка
+          # I=8 Аренда
+          # J=9 Примечания
+          # K=10 Статус
+          # L=11 Дата брони
+          # M=12 Место хранения
+          # N=13 Фото URL
+
+          for row in rows[2:]:
+              sku = get(row, 2)
+              name = get(row, 4)
+
+              if not sku or not sku.isdigit():
+                  continue
+
+              if not name:
+                  continue
+
+              price = clean_price(get(row, 8))
+
+              if price <= 0:
+                  continue
+
+              status = get(row, 10)
+              booked = is_booked(status)
+
+              product = {
+                  "sku": sku.zfill(5),
+                  "name": name,
+                  "category": get(row, 0),
+                  "subcategory": get(row, 1),
+                  "qty": clean_qty(get(row, 6)),
+                  "price": price,
+                  "notes": get(row, 9),
+                  "drive_link": get(row, 5),
+                  "photo": get(row, 13),
+                  "booked": booked,
+                  "booked_until": get(row, 11) if booked else ""
+              }
+
+              products.append(product)
+
+          categories = sorted(
+              {
+                  product["subcategory"]
+                  for product in products
+                  if product.get("subcategory")
+              }
+          )
+
+          booked_count = sum(1 for product in products if product.get("booked"))
+
+          data = {
+              "products": products,
+              "categories": categories,
+              "total": len(products),
+              "booked": booked_count
+          }
+
+          OUTPUT_FILE.write_text(
+              json.dumps(data, ensure_ascii=False, indent=2),
+              encoding="utf-8"
+          )
+
+          print(f"Прочитано строк: {len(rows)}")
+          print(f"Обработано товаров: {len(products)}")
+          print(f"Категорий: {len(categories)}")
+          print(f"Забронировано: {booked_count}")
+          print("data.json обновлён")
+          PY
+
+      - name: Commit updated data.json
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add data.json
+
+          if git diff --cached --quiet; then
+            echo "Изменений нет"
+          else
+            git commit -m "Auto update catalog data"
+            git push
+          fi
