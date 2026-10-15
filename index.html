@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Каталог декора, мебели и конструкций Fresh Decor для аренды.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Fresh Decor — каталог аренды">
+  <meta property="og:description" content="Декор, мебель и конструкции для ваших событий.">
+  <meta property="og:image" content="https://fresh-decor-catalog-2026.quietharp4.chatgpt.site/og.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Fresh Decor — каталог аренды">
+  <meta name="twitter:description" content="Декор, мебель и конструкции для ваших событий.">
+  <meta name="twitter:image" content="https://fresh-decor-catalog-2026.quietharp4.chatgpt.site/og.png">
+  <title>Fresh Decor — каталог аренды</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="styles.css?build=20261015-5">
+</head>
+<body>
+  <header class="header">
+    <button id="back-btn" class="header-icon hidden" type="button" aria-label="Назад">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <div class="header-brand" aria-label="Fresh Decor">
+      <img src="logo.png" alt="Fresh Decor" class="brand-logo">
+    </div>
+    <span class="header-icon header-icon--ghost" aria-hidden="true"></span>
+  </header>
+
+  <main id="screen-home" class="screen">
+    <section class="home-intro hero">
+      <h1 class="hero-title">Декор для ваших событий</h1>
+      <div class="search-box">
+        <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7.5"/><path d="m20 20-3.6-3.6"/></svg>
+        <input id="search-input" type="search" placeholder="Название или артикул" autocomplete="off" aria-label="Поиск по каталогу">
+      </div>
+    </section>
+
+    <section id="home-categories-section" class="section-block">
+      <div class="section-heading">
+        <h2>Категории</h2>
+        <span id="home-total"></span>
+      </div>
+      <div id="category-grid" class="category-grid"></div>
+    </section>
+
+    <section id="search-results-section" class="section-block hidden">
+      <div class="section-heading">
+        <h2>Результаты</h2>
+        <span id="search-count"></span>
+      </div>
+      <div id="search-results-grid" class="products-grid"></div>
+      <div id="search-empty" class="empty hidden">
+        <p class="empty-title">Ничего не нашлось</p>
+        <p class="empty-text">Попробуйте другое название или артикул.</p>
+      </div>
+    </section>
+
+    <div id="catalog-loader" class="loader">Загружаем каталог…</div>
+  </main>
+
+  <main id="screen-products" class="screen hidden">
+    <section class="page-head">
+      <p id="products-kicker" class="eyebrow">Категория</p>
+      <h1 id="products-title">Каталог</h1>
+      <p id="products-count" class="page-subtitle"></p>
+    </section>
+    <div id="chips-row" class="chips-row"></div>
+    <div id="products-grid" class="products-grid"></div>
+    <div id="products-empty" class="empty hidden">
+      <p class="empty-title">В этой категории пока пусто</p>
+      <p class="empty-text">Выберите другую подкатегорию.</p>
+    </div>
+  </main>
+
+  <main id="screen-product" class="screen hidden">
+    <div id="product-detail"></div>
+  </main>
+
+  <main id="screen-favorites" class="screen hidden">
+    <section class="page-head">
+      <p class="eyebrow">Ваша подборка</p>
+      <h1>Избранное</h1>
+      <p class="page-subtitle">Сохранённые позиции можно отправить менеджеру одним сообщением.</p>
+    </section>
+    <div id="favorites-grid" class="products-grid"></div>
+    <div id="favorites-empty" class="empty hidden">
+      <p class="empty-title">Здесь пока пусто</p>
+      <p class="empty-text">Нажимайте на сердечко у понравившихся предметов.</p>
+    </div>
+    <div class="sticky-cta">
+      <button class="btn-primary" id="ask-favorites-btn" type="button">
+        Написать менеджеру
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </button>
+    </div>
+  </main>
+
+  <main id="screen-directory" class="screen hidden">
+    <section class="page-head directory-head">
+      <p class="eyebrow">Все разделы</p>
+      <h1>Категории</h1>
+      <p class="page-subtitle">Выберите общую категорию или сразу нужный раздел.</p>
+    </section>
+    <div id="directory-groups" class="directory-groups"></div>
+  </main>
+
+  <nav class="bottom-nav" aria-label="Основная навигация">
+    <button id="nav-home" class="bottom-nav-btn active" type="button" aria-label="Главная">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="3.5" width="7" height="7" rx="1.5"/><rect x="3.5" y="13.5" width="7" height="7" rx="1.5"/><rect x="13.5" y="13.5" width="7" height="7" rx="1.5"/></svg>
+      <span>Главная</span>
+    </button>
+    <button id="nav-favorites" class="bottom-nav-btn" type="button" aria-label="Избранное">
+      <span id="favorites-count" class="favorites-count hidden">0</span>
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.8a5.3 5.3 0 0 0-7.5 0L12 6.1l-1.3-1.3a5.3 5.3 0 0 0-7.5 7.5L12 21l8.8-8.7a5.3 5.3 0 0 0 0-7.5Z"/></svg>
+      <span>Избранное</span>
+    </button>
+    <button id="nav-directory" class="bottom-nav-btn" type="button" aria-label="Категории">
+      <svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+      <span>Категории</span>
+    </button>
+  </nav>
+
+  <script src="app.js?build=20261015-3"></script>
+</body>
+</html>
