@@ -11220,6 +11220,19 @@
       "booked_until": ""
     },
     {
+      "sku": "00928",
+      "name": "Конструкция Сердце",
+      "category": "Конструкции",
+      "subcategory": "Арки",
+      "qty": 0,
+      "price": 300.0,
+      "notes": "",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
       "sku": "00935",
       "name": "Шкатулка золото",
       "category": "",
@@ -11424,6 +11437,6 @@
     "Этажерки",
     "Этно"
   ],
-  "total": 875,
+  "total": 876,
   "booked": 9
 }
