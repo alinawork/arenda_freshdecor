@@ -11506,6 +11506,32 @@
       "booked_until": ""
     },
     {
+      "sku": "00950",
+      "name": "Гирлянда \"Скелеты\"",
+      "category": "Тематический декор",
+      "subcategory": "Хэллоуин",
+      "qty": 0,
+      "price": 10.0,
+      "notes": "",
+      "drive_link": "https://drive.google.com/file/d/1fZgWVm1KbFG7MVERC5MY3FyS6Dy0x5Ui/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=1fZgWVm1KbFG7MVERC5MY3FyS6Dy0x5Ui&sz=w1600",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "00951",
+      "name": "Шляпы ведьмы с пауком",
+      "category": "Тематический декор",
+      "subcategory": "Хэллоуин",
+      "qty": 0,
+      "price": 5.0,
+      "notes": "",
+      "drive_link": "https://drive.google.com/file/d/1JznCe7yfzgK4WPqRVFZws-xDN9GLlrPq/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=1JznCe7yfzgK4WPqRVFZws-xDN9GLlrPq&sz=w1600",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
       "sku": "00952",
       "name": "Декоративные надгробия",
       "category": "Тематический декор",
@@ -12116,6 +12142,6 @@
     "Этажерки",
     "Этно"
   ],
-  "total": 928,
+  "total": 930,
   "booked": 9
 }
