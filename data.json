@@ -11201,8 +11201,8 @@
       "qty": 1,
       "price": 60.0,
       "notes": "",
-      "drive_link": "https://drive.google.com/drive/u/0/folders/1xQf2QGfV3egl2PU0rpGXCXJsWwu6TbZJ",
-      "photo": "https://drive.google.com/thumbnail?id=1FknChtH7r5ytFUXviz6mrQ0gjiR_FixX&sz=w1000",
+      "drive_link": "https://drive.google.com/file/d/1pEpuTfMOlWlBX0ZAj0Ws6gfuhD_OD5Su/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=1pEpuTfMOlWlBX0ZAj0Ws6gfuhD_OD5Su&sz=w1600",
       "booked": false,
       "booked_until": ""
     },
@@ -11606,6 +11606,19 @@
       "notes": "",
       "drive_link": "https://drive.google.com/file/d/1P591leSCVhnP8xdqosSVfEv8E4Pho6Q6/view?usp=sharing",
       "photo": "https://drive.google.com/thumbnail?id=1P591leSCVhnP8xdqosSVfEv8E4Pho6Q6&sz=w1600",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "00958",
+      "name": "Накидки на торшеры",
+      "category": "Освещение",
+      "subcategory": "Торшеры",
+      "qty": 21,
+      "price": 3.5,
+      "notes": "",
+      "drive_link": "https://drive.google.com/file/d/1QkMRdJ1AfCh_RzKih94N2Mein8vs20B4/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=1QkMRdJ1AfCh_RzKih94N2Mein8vs20B4&sz=w1600",
       "booked": false,
       "booked_until": ""
     },
@@ -12089,6 +12102,19 @@
       "photo": "https://drive.google.com/thumbnail?id=1k2A3t5MdnaNcn2UOkRWb8GARLfg7CksI&sz=w1600",
       "booked": false,
       "booked_until": ""
+    },
+    {
+      "sku": "00997",
+      "name": "Дементор",
+      "category": "Тематический декор",
+      "subcategory": "Хэллоуин",
+      "qty": 1,
+      "price": 15.0,
+      "notes": "",
+      "drive_link": "https://drive.google.com/file/d/1gpcfkDV1CN8ITAkha1xjO49QFJfeoy5Y/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=1gpcfkDV1CN8ITAkha1xjO49QFJfeoy5Y&sz=w1600",
+      "booked": false,
+      "booked_until": ""
     }
   ],
   "categories": [
@@ -12142,6 +12168,6 @@
     "Этажерки",
     "Этно"
   ],
-  "total": 930,
+  "total": 932,
   "booked": 9
 }
