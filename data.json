@@ -309,8 +309,8 @@
       "notes": "",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1iMSRJlbDJsdJtQw60Gw6PNzYuUZE6IIR",
       "photo": "https://drive.google.com/thumbnail?id=1irZVYAveSn5sTNl4C4OrDh8y86Dm_6xu&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00025",
@@ -322,8 +322,8 @@
       "notes": "",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1IbQMGRefvebp7Bwih2--0Fz5oZO2Nvo8",
       "photo": "https://drive.google.com/thumbnail?id=1KrQfqOzdrWoovLb7OrXE_gSdmL7_JCQw&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00026",
@@ -8616,8 +8616,8 @@
       "notes": "ШхВ / 90х100см",
       "drive_link": "https://drive.google.com/drive/u/0/folders/14tygcCMtbxV7ai9dW_8jXh67KsGrXalp",
       "photo": "https://drive.google.com/thumbnail?id=1SrCBXR7ZOdcWF0JbXWgs_SFpJV8G6pYj&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00668",
@@ -8629,8 +8629,8 @@
       "notes": "Стойка размеры.pdf",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1G4QnMZR6DVVde12OFLN7BJmNGfdGZ0nb",
       "photo": "https://drive.google.com/thumbnail?id=1OWWwUS_ExILWxzabyWtQzuFJbtn-oAF0&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00669",
@@ -9370,8 +9370,8 @@
       "notes": "Высота90-100см",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1rZb1MnQ_db0flYD2XwLF8i0KyelC244M",
       "photo": "https://drive.google.com/thumbnail?id=1EjXqLbvZKbJd0F50jZkMMhO9l020QWBs&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00727",
@@ -9461,8 +9461,8 @@
       "notes": "Арка 4х2,5м. размеры.pdf",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1FsH2X67G9IVlJWE5V-4llShCnjS5ozmu",
       "photo": "https://drive.google.com/thumbnail?id=18F7OGqjSyYvPBSJ9PLkputNBSP1VhKMe&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00752",
@@ -10384,8 +10384,8 @@
       "notes": "Диаметр х Высота2,2х2,6м регулируемая,Нога металл",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1bQyjDK6BQGCpj8GjkDEfnzCPn_ZgrM7n",
       "photo": "https://drive.google.com/thumbnail?id=1QezP3-MzyfnFR-RRvAxMRnOxQ1CNzHVk&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00826",
@@ -10488,8 +10488,8 @@
       "notes": "ШхВ / 85х60см",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1809D1wgTsu64yrbFFZjhC1ubWzfqHIMn",
       "photo": "https://drive.google.com/thumbnail?id=1d8mt3UUWqZtQybUMsEBFnsCVIShp69fi&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00834",
@@ -10540,8 +10540,8 @@
       "notes": "диаметр чаши 11,2 см, диаметр пятки 6,5 см, высота 11,8 см",
       "drive_link": "https://drive.google.com/drive/u/0/folders/1TFEVL96hBbqKx52JAaE4-LTsVSScnSxw",
       "photo": "https://drive.google.com/thumbnail?id=1nhhaHDy9gefLLbcq5boe26G-VoWLR82A&sz=w1000",
-      "booked": true,
-      "booked_until": "#N/A"
+      "booked": false,
+      "booked_until": ""
     },
     {
       "sku": "00838",
@@ -12313,5 +12313,5 @@
     "Этно"
   ],
   "total": 943,
-  "booked": 9
+  "booked": 0
 }
