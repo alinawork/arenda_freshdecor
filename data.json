@@ -12117,6 +12117,19 @@
       "booked_until": ""
     },
     {
+      "sku": "00998",
+      "name": "Дуэт",
+      "category": "Конструкции",
+      "subcategory": "Арки",
+      "qty": 1,
+      "price": 450.0,
+      "notes": "",
+      "drive_link": "https://drive.google.com/file/d/18gYbzCx_hvMpq79OM6DglrJQoJjXyGxl/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=18gYbzCx_hvMpq79OM6DglrJQoJjXyGxl&sz=w1600",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
       "sku": "00999",
       "name": "Салфетка ажурная",
       "category": "Текстиль",
@@ -12258,6 +12271,45 @@
       "photo": "https://drive.google.com/thumbnail?id=1Qfsp9VnA31cqNkIGgwYqH0a50Hw-AKMU&sz=w1600",
       "booked": false,
       "booked_until": ""
+    },
+    {
+      "sku": "01012",
+      "name": "Вазы ростовые с колоннами",
+      "category": "конструкции",
+      "subcategory": "арки",
+      "qty": 2,
+      "price": 450.0,
+      "notes": "ваза: - высота 163 см - ширина 68 см колонна: - высота 100 см- ширина 59 смСтоимость 150 у.е. Оплата в BYN  по курсу нац банка",
+      "drive_link": "https://drive.google.com/file/d/17G_tc23MAMtiy_Us98ui4ljsI9jgRqRd/view?usp=sharing",
+      "photo": "https://drive.google.com/thumbnail?id=17G_tc23MAMtiy_Us98ui4ljsI9jgRqRd&sz=w1600",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "01013",
+      "name": "Шляпы ковбойские",
+      "category": "",
+      "subcategory": "",
+      "qty": 4,
+      "price": 12.0,
+      "notes": "",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "01014",
+      "name": "Суккуленты искуственные",
+      "category": "Искусственные растения",
+      "subcategory": "Зеленые",
+      "qty": 6,
+      "price": 3.5,
+      "notes": "",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
     }
   ],
   "categories": [
@@ -12267,6 +12319,7 @@
     "Вазы",
     "Вентиляторы",
     "Другое",
+    "Зеленые",
     "Зеркала",
     "Зонты",
     "Камни",
@@ -12310,8 +12363,9 @@
     "Шары",
     "Шкатулки",
     "Этажерки",
-    "Этно"
+    "Этно",
+    "арки"
   ],
-  "total": 943,
+  "total": 947,
   "booked": 0
 }
