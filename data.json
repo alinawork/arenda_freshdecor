@@ -11350,6 +11350,19 @@
       "booked_until": ""
     },
     {
+      "sku": "00931",
+      "name": "Арка \"Рамка\"",
+      "category": "",
+      "subcategory": "",
+      "qty": 0,
+      "price": 105.0,
+      "notes": "Стоимость указана за каркас арки, без обшивки",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
       "sku": "00935",
       "name": "Шкатулка золото",
       "category": "Декор",
@@ -12276,7 +12289,7 @@
       "sku": "01012",
       "name": "Вазы ростовые с колоннами",
       "category": "конструкции",
-      "subcategory": "арки",
+      "subcategory": "Арки",
       "qty": 2,
       "price": 450.0,
       "notes": "ваза: - высота 163 см - ширина 68 см колонна: - высота 100 см- ширина 59 смСтоимость 150 у.е. Оплата в BYN  по курсу нац банка",
@@ -12305,6 +12318,32 @@
       "subcategory": "Зеленые",
       "qty": 6,
       "price": 3.5,
+      "notes": "",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "01015",
+      "name": "Манекены Серебро",
+      "category": "",
+      "subcategory": "",
+      "qty": 2,
+      "price": 150.0,
+      "notes": "",
+      "drive_link": "",
+      "photo": "",
+      "booked": false,
+      "booked_until": ""
+    },
+    {
+      "sku": "01016",
+      "name": "Пень бутафорский",
+      "category": "",
+      "subcategory": "",
+      "qty": 2,
+      "price": 45.0,
       "notes": "",
       "drive_link": "",
       "photo": "",
@@ -12363,9 +12402,8 @@
     "Шары",
     "Шкатулки",
     "Этажерки",
-    "Этно",
-    "арки"
+    "Этно"
   ],
-  "total": 947,
+  "total": 950,
   "booked": 0
 }
