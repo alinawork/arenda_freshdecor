@@ -12527,8 +12527,8 @@
       "qty": 5,
       "price": 10.0,
       "notes": "высота 21 см — 10 BYN/шт.",
-      "drive_link": "",
-      "photo": "",
+      "drive_link": "https://drive.google.com/file/d/1lugVC36jvYwl9hAUnawymLAw7NcrVikI/view?usp=drivesdk",
+      "photo": "https://drive.google.com/thumbnail?id=1lugVC36jvYwl9hAUnawymLAw7NcrVikI&sz=w1600",
       "booked": false,
       "booked_until": ""
     },
@@ -12540,8 +12540,8 @@
       "qty": 9,
       "price": 8.0,
       "notes": "Белый: высота 13 см — 8 BYN/шт.",
-      "drive_link": "",
-      "photo": "",
+      "drive_link": "https://drive.google.com/file/d/1Jg4l0kuztFLWy29ueKL3hYPa0jTQwN1m/view?usp=drivesdk",
+      "photo": "https://drive.google.com/thumbnail?id=1Jg4l0kuztFLWy29ueKL3hYPa0jTQwN1m&sz=w1600",
       "booked": false,
       "booked_until": ""
     },
@@ -12553,8 +12553,8 @@
       "qty": 2,
       "price": 8.0,
       "notes": "Чёрный: высота 13 см — 8 BYN/шт.",
-      "drive_link": "",
-      "photo": "",
+      "drive_link": "https://drive.google.com/file/d/1zsufXC0pGlyKI2PMomipJqmPz_1qFzFK/view?usp=drivesdk",
+      "photo": "https://drive.google.com/thumbnail?id=1zsufXC0pGlyKI2PMomipJqmPz_1qFzFK&sz=w1600",
       "booked": false,
       "booked_until": ""
     },
@@ -12566,8 +12566,8 @@
       "qty": 14,
       "price": 20.0,
       "notes": "Высота: 28 см.Диаметр цилиндра: 11 см.",
-      "drive_link": "",
-      "photo": "",
+      "drive_link": "https://drive.google.com/file/d/1UrsKR7qshobYPdBMPxj7pFs0cUJ6S2hV/view?usp=drivesdk",
+      "photo": "https://drive.google.com/thumbnail?id=1UrsKR7qshobYPdBMPxj7pFs0cUJ6S2hV&sz=w1600",
       "booked": false,
       "booked_until": ""
     }
