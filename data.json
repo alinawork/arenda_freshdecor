@@ -12570,6 +12570,19 @@
       "photo": "https://drive.google.com/thumbnail?id=1UrsKR7qshobYPdBMPxj7pFs0cUJ6S2hV&sz=w1600",
       "booked": false,
       "booked_until": ""
+    },
+    {
+      "sku": "01098",
+      "name": "Микс суккулентов",
+      "category": "Искусственные растения",
+      "subcategory": "Зеленые",
+      "qty": 20,
+      "price": 3.5,
+      "notes": "Микс искусственных суккулентов и зелени: бордовая розетка, две зелёные розетки, узколистная зелень и ветка с зелёными ягодами. На фото 5 элементов.",
+      "drive_link": "https://drive.google.com/file/d/12qxEjes7m_6oGEXiPKf482KdJ52vCA-n/view",
+      "photo": "https://drive.google.com/thumbnail?id=12qxEjes7m_6oGEXiPKf482KdJ52vCA-n&sz=w1600",
+      "booked": false,
+      "booked_until": ""
     }
   ],
   "categories": [
@@ -12627,6 +12640,6 @@
     "Этажерки",
     "Этно"
   ],
-  "total": 967,
+  "total": 968,
   "booked": 0
 }
