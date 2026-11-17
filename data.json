@@ -12583,6 +12583,19 @@
       "photo": "https://drive.google.com/thumbnail?id=12qxEjes7m_6oGEXiPKf482KdJ52vCA-n&sz=w1600",
       "booked": false,
       "booked_until": ""
+    },
+    {
+      "sku": "01259",
+      "name": "Петля декоративная металлическая (35×9 см)",
+      "category": "Декор",
+      "subcategory": "Фурнитура декоративная",
+      "qty": 5,
+      "price": 5.0,
+      "notes": "Фигурная металлическая петля с фактурной поверхностью, для оформления дверей и тематических декораций. 35×9 см. Оборот: https://drive.google.com/file/d/1V0_gS8CK8vAqhvj9JiNSCA_NH_OH-S6q/view",
+      "drive_link": "https://drive.google.com/file/d/15njYBH8dXRg7BBu0iMgdZ6IEmyguxtbl/view",
+      "photo": "https://drive.google.com/thumbnail?id=15njYBH8dXRg7BBu0iMgdZ6IEmyguxtbl&sz=w1600",
+      "booked": false,
+      "booked_until": ""
     }
   ],
   "categories": [
@@ -12629,6 +12642,7 @@
     "Ткань",
     "Торшеры",
     "Тумбы",
+    "Фурнитура декоративная",
     "Хэллоуин",
     "Цветочницы",
     "Цветы / Лепестки",
@@ -12640,6 +12654,6 @@
     "Этажерки",
     "Этно"
   ],
-  "total": 968,
+  "total": 969,
   "booked": 0
 }
